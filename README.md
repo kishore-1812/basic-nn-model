@@ -10,7 +10,7 @@ Explain the problem statement
 
 ## Neural Network Model
 
-Include the neural network model diagram.
+![image](https://user-images.githubusercontent.com/63336975/187065284-9a7f7189-3c7a-49a4-acce-7ec8f0f9d45d.png)
 
 ## DESIGN STEPS
 
@@ -48,20 +48,21 @@ Include your code here
 
 ## Dataset Information
 
-Include screenshot of the dataset
+![image](https://user-images.githubusercontent.com/63336975/187065319-f96d083b-bb81-4dbb-8268-5326485f4218.png)
 
 ## OUTPUT
 
 ### Training Loss Vs Iteration Plot
-
-Include your plot here
+![image](https://user-images.githubusercontent.com/63336975/187065347-1add0b3d-352f-4bdf-b04a-81a4e905b10f.png)
 
 ### Test Data Root Mean Squared Error
 
-Find the test data root mean squared error
+0.7378836274147034
 
 ### New Sample Data Prediction
 
-Include your sample input and output here
+![image](https://user-images.githubusercontent.com/63336975/187065399-d4bb9399-c25e-4d42-905a-0c902270f3c8.png)
 
 ## RESULT
+Succesfully created and trained a neural network regression model for the given dataset.
+

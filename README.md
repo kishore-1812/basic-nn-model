@@ -44,7 +44,7 @@ Evaluate the model with the testing data.
 
 ## PROGRAM
 
-Include your code here
+[Include your code here](https://github.com/kishore-1812/basic-nn-model/blob/main/copy_of_nn_training.ipynb)
 
 ## Dataset Information
 

@@ -5,8 +5,7 @@
 To develop a neural network regression model for the given dataset.
 
 ## THEORY
-
-Explain the problem statement
+From the given dataset, The model should be trained to give respective correct output for any given new input.
 
 ## Neural Network Model
 

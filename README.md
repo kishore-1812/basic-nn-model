@@ -43,9 +43,45 @@ Evaluate the model with the testing data.
 
 ## PROGRAM
 
-''' python
-print("hello world")
-'''
+``` python
+from google.colab import auth
+import gspread
+from google.auth import default
+import pandas as pd
+from sklearn.preprocessing import MinMaxScaler
+from sklearn.model_selection import train_test_split
+from tensorflow.keras import Sequential
+from tensorflow.keras.layers import Dense
+
+auth.authenticate_user()
+creds, _ = default()
+gc = gspread.authorize(creds)
+data = pd.read_csv("/content/sample_data/random_dataset.csv")
+
+df = pd.DataFrame(data = data)
+df.head()
+X = df[["input "]].values
+Y = df[["output"]].values
+X_train,X_test, y_train, y_test = train_test_split(X,Y,test_size=0.25,random_state=50)
+Scaler = MinMaxScaler()
+Scaler.fit(X_train)
+Scaler.fit(X_test)
+modified_train_x = Scaler.transform(X_train)
+modified_test_x = Scaler.transform(X_test)
+model = Sequential([
+    Dense(9,activation='relu'),
+    Dense(15,activation='relu'),
+    Dense(1)
+])
+model.compile(optimizer='rmsprop',loss='mse')
+model.fit(modified_train_x,y_train,epochs=5000)
+loss_df = pd.DataFrame(model.history.history)
+loss_df.plot()
+model.evaluate(modified_test_x,y_test)
+pred1 = [[78]]
+pred_trans = Scaler.transform(pred1)
+model.predict(pred_trans)
+```
 
 ## Dataset Information
 
